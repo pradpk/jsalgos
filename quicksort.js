@@ -1,4 +1,5 @@
 let a = [100,32,67,135,245,22,23];
+console.log("Lomuto partition scheme");
 console.log("Before starting--" + a);
 console.log(quicksort(a, 0, a.length-1));
 
