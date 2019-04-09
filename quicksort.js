@@ -1,5 +1,5 @@
-let a = [100,32,67,135,245,22,23];
-console.log("Lomuto partition scheme");
+let a = [7,6,5,4,3,2,1];
+console.log("Lomuto partition scheme - Refer Wikipedia");
 console.log("Before starting--" + a);
 console.log(quicksort(a, 0, a.length-1));
 
@@ -14,8 +14,9 @@ function quicksort(a, lo, hi) {
 
 function partition(a, lo, hi) {
 	pivot = a[hi];
+	console.log("pivot : " + pivot);
 	i = lo;
-	for(j=lo;j<hi;j++) {
+	for(j=lo;j<hi;j++) {		
 		if(a[j] < pivot) {
 			tmp = a[i];
 			a[i] = a[j];
@@ -26,9 +27,6 @@ function partition(a, lo, hi) {
 	tmp = a[i];
 	a[i] = a[hi];
 	a[hi] = tmp;
-	console.log("Step -> " + a +  "piv: " + i);
+	console.log("Pivot moved to right place -> " + a);
 	return i;
 }
-
-
-
